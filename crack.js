@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { spawn } = require('child_process');
+const { spawn } = require('cross-spawn');
 
 var matchOperatorsRe = /[|\\{}()\[\]^$+*?\.]/g;
 var escapeRegString = function (str) {
@@ -48,11 +48,15 @@ var _0x27c8 = function (x, c) {
   return e
 };
 
-var replaceVar = (str) => {
+var replaceVar =
+/**
+ * @param {string} str 
+ */
+(str) => {
   var rules = [
     { // 替换字典函数
       exec: () => {
-        return new RegExp('_0x27c8\\("([a-z0-9]+)"\\)', 'g')
+        return /__Ox6de82\[([a-z0-9]*)\]/g
       },
       replace: () => {
         return function (match, $1) {

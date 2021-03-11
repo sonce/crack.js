@@ -21,10 +21,11 @@ Just to crack this
 
 
 ## Step
+准备：在crack.js，设置字典变量：_0x2c19；rules变量中，更改字典变量的正则：return /__Ox6de82\[([a-z0-9]*)\]/g
 
 1.  http://www.jsnice.org/
 
-2. -- This tool --
+2. -- This tool : node crack.js --
 
 3. http://www.jsnice.org/
 
